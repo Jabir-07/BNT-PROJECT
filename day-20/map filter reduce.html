@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D</title>
+</head>
+<body>
+    <script>
+        let values = ["JABIR","TWITTER","IRAN"];
+        let ints = [1,2,3,4,5];
+        let appl = values.map(name => name.toLowerCase()) ;
+        document.writeln(appl);
+        
+        let fil = ints.filter(i => i<= 3);
+        document.writeln(fil);
+
+        let numbers = [1,2,3,4,5];
+        let sum = numbers.reduce((total, num) => total + num,0 );
+        document.writeln(sum);
+    </script>
+</body>
+</html>

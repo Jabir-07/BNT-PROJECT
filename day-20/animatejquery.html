@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #boxy
+        {
+            height: 200px;
+            width: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxy">
+
+    </div>
+    <button id="bt-1" > HIDE </button>
+    <button id="bt-2"> SHOW </button>
+    <button id="bt-3"> TOGGLE </button>
+    <script>
+        $("#bt-1").click( function()
+    {
+        $("#boxy").hide(1400);
+    });
+    $("#bt-2").click( function()
+    {
+        $("#boxy").show(1400);
+    });
+    $("#bt-3").click( function()
+    {
+        $("#boxy").toggle(1400);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .addclr
+        {
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+        .newclr
+        {
+            background-color: aquamarine;
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="addclr" class="addclr">
+        
+    </div>
+    <button  class="btn" > CLICK TO CHANGE COLOR </button>
+    <script>
+        
+         $(".btn").click(function () {
+            $("#addclr").toggleClass("newclr");
+        });
+        
+
+    </script>
+</body>
+</html>

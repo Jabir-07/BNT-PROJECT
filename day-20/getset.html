@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Get &amp; Set</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<input type="text" id="nameBox" value="Initial Text"/>
+<button id="getBtn">GET</button>
+<button id="setBtn">SET</button>
+<p id="result"></p>
+
+<script>
+  $('#getBtn').click(function() {
+    let val = $('#nameBox').val();
+    $('#result').text(val);
+  });
+
+  $('#setBtn').click(function() {
+    $('#nameBox').val('New Text Set');
+  });
+</script>
+
+</body>
+</html>

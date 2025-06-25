@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("ENTER THE FIRST VALUE:");
+        let b = prompt("ENTER THE SECOND VALUE :");
+
+        function ex()
+        {
+            try {
+                if(b == 0)
+            {
+                throw new Error("NUMBER CAN'T BE DIVIDED BY ZERO");
+            }
+                let result = a/b;
+                console.log(result);
+            } catch (e) {
+                console.log("Error:",e.message);
+            }
+            finally
+            {
+                
+                alert("Output Finally Executed /-");
+            }
+        }
+        ex();
+
+    </script>
+</body>
+</html>

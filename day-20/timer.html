@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <h2 id="time">0 : 0 : 0</h2>
+
+  <button id="start" onclick="start()">START</button>
+  <button id="stop" onclick="stop()">STOP</button>
+  <button id="rst" onclick="rst()">RESET</button>
+
+  <script>
+    let hour = 0;
+    let min = 0;
+    let seconds = 0;
+    let stratinterval = null;
+
+    let view = document.getElementById("time");
+    
+    function updateDisplay() {
+      view.textContent = `${hour} : ${min} : ${seconds}`;
+    }
+
+    function stpwtch() {
+      seconds++;
+      if (seconds == 60) {
+        seconds = 0;
+        min++;
+        if (min == 60) {
+          min = 0;
+          hour++;
+        }
+      }
+      updateDisplay();
+    }
+
+    function start() {
+      if (stratinterval !== null) return; 
+      stratinterval = setInterval(stpwtch, 1000);
+    }
+
+    function stop()
+    {
+        clearInterval(stratinterval)
+        view.textContent = `${hour} : ${min} : ${seconds}`;
+    }
+
+    function rst()
+    {
+        clearInterval(stratinterval)
+        hour = 0;
+        min = 0;
+        seconds = 0;
+        view.textContent = `${hour} : ${min} : ${seconds}`;
+
+    }
+  </script>
+
+</body>
+</html>

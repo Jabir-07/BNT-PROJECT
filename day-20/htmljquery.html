@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery HTML Manipulation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<p id="text">Hello <b>World</b></p>
+<button id="changeHtml">Change HTML</button>
+
+<script>
+  $('#changeHtml').click(function() {
+    $('#text').html('Welcome to <i>jQuery</i>');
+  });
+</script>
+
+</body>
+</html>
